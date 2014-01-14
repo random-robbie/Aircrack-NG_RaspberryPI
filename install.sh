@@ -12,7 +12,8 @@
 echo "Starting Updating APT"
 sudo apt-get update
 echo "Installing Dependencys"
-sudo apt-get install libssl-dev subversion iw libnl-dev libnl-3-dev libnl-genl-3-dev macchanger sqlite3 reaver -y
+sudo apt-get install libssl-dev subversion iw libnl-dev macchanger sqlite3 reaver -y
+sudo apt-get install libnl-3-dev libnl-genl-3-dev -y
 echo "Grabbing Aircrack From SVN"
 svn co http://svn.aircrack-ng.org/trunk/ aircrack-ng 
 cd aircrack-ng 
