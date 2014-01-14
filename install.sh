@@ -1,18 +1,18 @@
 #!/bin/bash
 #################################################
 # Aircrack-ng Installer For Raspberry Pi        #
-#												#
-# Made By Robert Wiggins						#
-# txt3rob@gmail.com								#
-#												#
+#												                        #
+# Made By Robert Wiggins					            	#
+# txt3rob@gmail.com							              	#
+#												                        #
 # USE AT YOUR OWN RISK & TEST ONLY ON YOUR OWN  #
-# HARDWARE NOT ANY ONE ELSES					#
-#												#
+# HARDWARE NOT ANY ONE ELSES				          	#
+#											                        	#
 #################################################
 echo "Starting Updating APT"
 sudo apt-get update
 echo "Installing Dependencys"
-sudo apt-get install libssl-dev subversion iw libnl-dev libnl-3-dev  libnl-genl-3-dev macchanger sqlite3 -y
+sudo apt-get install libssl-dev subversion iw libnl-dev libnl-3-dev  libnl-genl-3-dev macchanger sqlite3 reaver -y
 echo "Grabbing Aircrack From SVN"
 svn co http://svn.aircrack-ng.org/trunk/ aircrack-ng 
 cd aircrack-ng 
