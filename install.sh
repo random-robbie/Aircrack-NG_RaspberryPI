@@ -23,6 +23,5 @@ sudo make
 sudo make install
 sudo airodump-ng-oui-update
 cd scripts
-sudo chmod +x airmon-ng
-sudo cp airmon-ng /usr/bin/airmon-ng
+sudo make install
 echo "done"
