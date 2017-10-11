@@ -15,7 +15,9 @@ echo "Installing Dependencys"
 sudo apt-get install libssl-dev subversion iw libnl-dev macchanger sqlite3 reaver -y
 sudo apt-get install libnl-3-dev libnl-genl-3-dev -y
 echo "Grabbing Aircrack From SVN"
-svn co http://svn.aircrack-ng.org/trunk/ aircrack-ng 
+wget http://download.aircrack-ng.org/aircrack-ng-1.2-rc4.tar.gz
+tar xzvf aircrack-ng-1.2-rc4.tar.gz
+mv aircrack-ng-1.2-rc4 aircrack-ng
 cd aircrack-ng 
 make 
 sudo make install
@@ -23,10 +25,4 @@ sudo airodump-ng-oui-update
 cd scripts
 chmod +x airmon-ng
 cp airmon-ng /usr/bin/airmon-ng
-cd /root/
-echo "Grabbing Airoscript From SVN"
-sudo svn co http://svn.aircrack-ng.org/branch/airoscript-ng/ airoscript-ng
-cd airoscript-ng
-sudo make
-cd /root/
 echo "done"
